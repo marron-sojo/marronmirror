@@ -14,7 +14,7 @@ Module.register("compliments", {
 			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
 			"....-01-01": ["Happy new year!"]
 		},
-		updateInterval: 30000,
+		updateInterval: 5000,
 		remoteFile: null,
 		fadeSpeed: 4000,
 		morningStartTime: 3,
@@ -117,7 +117,7 @@ Module.register("compliments", {
 		
 		return compliments*/
 
-		return ["Hey there joni&sohee!"];
+		return ["Hey there joni&sohee!", "We are Mount Holyoke College", "Welcome to Fimbel lab"];
 	},
 
 	/**
