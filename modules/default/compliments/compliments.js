@@ -8,7 +8,7 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Hey there sexy!"],
+			anytime: ["Hey there joni&sohee!"],
 			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
 			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
@@ -32,7 +32,10 @@ Module.register("compliments", {
 	getScripts: function () {
 		return ["moment.js"];
 	},
-
+	// Define styles.
+	getStyles: function () {
+		return ["compliments_styles.css"];
+	},
 	// Define start sequence.
 	start: function () {
 		Log.info("Starting module: " + this.name);
@@ -84,7 +87,7 @@ Module.register("compliments", {
 	 * @returns {string[]} array with compliments for the time of the day.
 	 */
 	complimentArray: function () {
-		const hour = moment().hour();
+		/*const hour = moment().hour();
 		const date = this.config.mockDate ? this.config.mockDate : moment().format("YYYY-MM-DD");
 		let compliments;
 
@@ -111,8 +114,10 @@ Module.register("compliments", {
 				compliments.push.apply(compliments, this.config.compliments[entry]);
 			}
 		}
+		
+		return compliments*/
 
-		return compliments;
+		return ["Hey there joni&sohee!"];
 	},
 
 	/**
@@ -167,6 +172,9 @@ Module.register("compliments", {
 		const parts = complimentText.split("\n");
 		// create a span to hold it all
 		const compliment = document.createElement("span");
+		
+		compliment.classList.add("testClass");
+		
 		// process all the parts of the compliment text
 		for (const part of parts) {
 			// create a text element for each part
