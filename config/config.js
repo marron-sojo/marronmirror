@@ -13,7 +13,7 @@ let config = {
 							// - another specific IPv4/6 to listen on a specific interface
 							// - "0.0.0.0", "::" to listen on any interface
 							// Default, when address config is left out or empty, is "localhost"
-	port: 8080,
+	port: 8060,
 	basePath: "/", 	// The URL path where MagicMirror is hosted. If you are using a Reverse proxy
 					// you must set the sub path here. basePath must end with a /
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], 	// Set [] to allow all IP addresses
@@ -64,7 +64,7 @@ let config = {
 		},
 		{
 			module: "compliments",
-			position: "lower_third"
+			position: "bottom_bar"
 		},
 		{
 			module: "weather",
@@ -88,7 +88,7 @@ let config = {
 				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				apiKey: "9aca5ffce31dc14a13569843886d5c97"
 			}
-		},
+		},/*
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
@@ -104,6 +104,24 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
+		},*/
+		{
+			module: "MMM-EyeCandy",
+			position: "middle_center",
+			config: {
+				maxWidth: "20%",
+				ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
+			}
+		},
+		{
+			module: "googlemap",
+			position: "bottom_left",
+			config: {
+				apikey: 'AIzaSyDwSDIe_qMPFufCLtz5JB80jgUG9-AgoqI',
+				origin: 'Mount Holyoke College',
+				destination: 'UMass',
+			}
+			
 		},
 	]
 };

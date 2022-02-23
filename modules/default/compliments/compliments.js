@@ -8,7 +8,7 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Hey there joni&sohee!"],
+			anytime: ["Hey there,joni&sohee!"],
 			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
 			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
 			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
@@ -117,7 +117,7 @@ Module.register("compliments", {
 		
 		return compliments*/
 
-		return ["Hey there joni&sohee!", "We are Mount Holyoke College", "Welcome to Fimbel lab"];
+		return ["Heythere,joni&sohee!", "Hello,Barbara:)"];
 	},
 
 	/**
@@ -164,6 +164,7 @@ Module.register("compliments", {
 
 	// Override dom generator.
 	getDom: function () {
+
 		const wrapper = document.createElement("div");
 		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright pre-line";
 		// get the compliment text
