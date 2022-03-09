@@ -104,15 +104,17 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		},*/
+		}, */
 		{
 			module: "MMM-EyeCandy",
 			position: "middle_center",
 			config: {
 				maxWidth: "20%",
-				ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
+				style: "1",
+				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
-		},
+		}, 
+
 		{
 			module: "googlemap",
 			position: "bottom_left",
