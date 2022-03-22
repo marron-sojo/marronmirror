@@ -104,7 +104,7 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		}, 
+		}, */
 		{
 			module: "MMM-EyeCandy",
 			position: "middle_center",
@@ -113,7 +113,7 @@ let config = {
 				style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
-		}, */
+		}, /*
 				{
 			module: "MMM-ASLLearn",
 			position: "middle_center",
@@ -123,7 +123,7 @@ let config = {
 				//style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
-		}, 
+		}, */
 
 		{
 			module: "googlemap",
