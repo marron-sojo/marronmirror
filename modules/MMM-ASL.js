@@ -1,7 +1,7 @@
 /* Magic Mirror
- * Module: MMM-EyeCandy
+ * Module: MMM-ASL
  *
- * By Mykle1
+ * By Sohee Kim, Joni Park
  * MIT Licensed.
  */
 Module.register("MMM-EyeCandy", {
@@ -15,10 +15,19 @@ Module.register("MMM-EyeCandy", {
         this.gifUrls = [
             ["one", "https://media.giphy.com/media/qUdiWk9DnEfC0/giphy.gif"],
             ["two", "https://media.giphy.com/media/xT1Ra0YPsiN7Yz51Oo/giphy.gif"],
-            ["three", "https://giphy.com/clips/buzzfeed-kylie-jenner-buzzfeed-celeb-jordyn-woods-DvUHNSJXVeevC50djG"],
-            ["four", "https://giphy.com/clips/buzzfeed-buzzfeed-celeb-bowen-yang-reads-thirst-tweets-vnZAMoH2WjTIqmMROq"],
+            [
+                "three",
+                "https://giphy.com/clips/buzzfeed-kylie-jenner-buzzfeed-celeb-jordyn-woods-DvUHNSJXVeevC50djG",
+            ],
+            [
+                "four",
+                "https://giphy.com/clips/buzzfeed-buzzfeed-celeb-bowen-yang-reads-thirst-tweets-vnZAMoH2WjTIqmMROq",
+            ],
         ];
-        this.url = this.gifUrls[Math.floor(Math.random() * (this.gifUrls.length - 1))][1];
+        let random =
+            this.gifUrls[Math.floor(Math.random() * (this.gifUrls.length - 1))];
+        this.url = random[1];
+        this.word = random[0];
     },
 
     getStyles: function() {
@@ -35,6 +44,10 @@ Module.register("MMM-EyeCandy", {
         image.src = this.url;
         image.style.maxWidth = this.config.maxWidth;
         wrapper.appendChild(image);
+
+        let text = document.createElement("text");
+        text.classList.add = "word";
+        text.innerHTML = this.word;
 
         return wrapper;
     },
