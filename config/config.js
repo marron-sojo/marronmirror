@@ -104,13 +104,23 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		}, */
+		}, 
 		{
 			module: "MMM-EyeCandy",
 			position: "middle_center",
 			config: {
 				maxWidth: "20%",
 				style: "1",
+				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
+			}
+		}, */
+				{
+			module: "MMM-ASLLearn",
+			position: "middle_center",
+			config: {
+				maxWidth: "40%",
+				
+				//style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
 		}, 
