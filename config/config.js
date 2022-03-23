@@ -37,7 +37,7 @@ let config = {
 	// false, default for all NON-armv6l devices
 	// true, force serveronly mode, because you want to.. no UI on this device
 
-	modules: [
+	modules: [/*
 		{
 			module: "alert",
 		},
@@ -88,7 +88,7 @@ let config = {
 				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				apiKey: "9aca5ffce31dc14a13569843886d5c97"
 			}
-		},/*
+		},
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
@@ -110,7 +110,7 @@ let config = {
 			position: "middle_center",
 			config: {
 				maxWidth: "20%",
-				style: "1",
+				//style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
 		}, /*
@@ -123,7 +123,7 @@ let config = {
 				//style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
-		}, */
+		}, 
 
 		{
 			module: "googlemap",
@@ -143,7 +143,7 @@ let config = {
 				listID: "MDk0NjQ2MDQyNjc1OTA5NDUzOTY6MDow",
 			}
 			
-		},
+		},*/
 	]
 };
 
