@@ -17,37 +17,39 @@ Module.register("MMM-EyeCandy", {
             ["two", "https://media.giphy.com/media/xT1Ra0YPsiN7Yz51Oo/giphy.gif"],
             [
                 "three",
-                "https://giphy.com/clips/buzzfeed-kylie-jenner-buzzfeed-celeb-jordyn-woods-DvUHNSJXVeevC50djG",
+                "https://media.giphy.com/media/46zn7p2dDz2cGqjCwe/giphy-downsized-large.gif",
             ],
             [
                 "four",
-                "https://giphy.com/clips/buzzfeed-buzzfeed-celeb-bowen-yang-reads-thirst-tweets-vnZAMoH2WjTIqmMROq",
+                "https://media.giphy.com/media/3kHJ6aIUVtjhLefBiz/giphy.gif",
             ],
         ];
-        let random =
-            this.gifUrls[Math.floor(Math.random() * (this.gifUrls.length - 1))];
-        this.url = random[1];
-        this.word = random[0];
+        this.random =
+            this.gifUrls[Math.floor(Math.random() * (this.gifUrls.length))];
+        this.url = this.random[1];
+        this.word = this.random[0];
     },
 
-    getStyles: function() {
-        return ["MMM-EyeCandy.css"];
-    },
+    // Define styles.
+	getStyles: function () {
+		return ["MMM-EyeCandy.css"];
+	},
 
-    // Override dom generator.
     getDom: function() {
         var wrapper = document.createElement("div");
+        wrapper.classList.add("main");
+        
+        var text = document.createElement("text");
+        text.innerHTML = this.word;
+        text.classList.add("word");
+        wrapper.appendChild(text);
+        
         var image = document.createElement("img");
-        // var getTimeStamp = new Date();
-        image.classList.add = "photo";
-        // image.src = this.url + "?seed=" + getTimeStamp;
+        image.classList.add("photo");
         image.src = this.url;
         image.style.maxWidth = this.config.maxWidth;
         wrapper.appendChild(image);
 
-        let text = document.createElement("text");
-        text.classList.add = "word";
-        text.innerHTML = this.word;
 
         return wrapper;
     },
@@ -61,3 +63,4 @@ Module.register("MMM-EyeCandy", {
     //     }
     // },
 });
+
