@@ -1,22 +1,28 @@
+
+  
 /* Copy and paste any or all of these css entries into your custom.css file inside your
  * css folder. The functions are annotated to make things as easy as possible for you.
  * Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
  * Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
  */
 
-.MMM-ASL .photo {
-    border-radius: 50px;
+.photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
 }
 
-.MMM-ASL .word {
-    font-size: 120px;
+.word {
+    font-size: 150px;
+    color: pink;
 }
 
-.MMM-ASL .div {
+.main {
     display: flex;
     justify-content: space-between;
-    padding-top: 15%;
+    padding-top: 5%;
     padding-bottom: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
