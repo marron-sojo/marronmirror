@@ -106,7 +106,7 @@ let config = {
 			}
 		}, */
 		{
-			module: "MMM-EyeCandy",
+			module: "MMM-ASL",
 			position: "middle_center",
 			config: {
 				maxWidth: "20%",
