@@ -37,7 +37,7 @@ let config = {
 	// false, default for all NON-armv6l devices
 	// true, force serveronly mode, because you want to.. no UI on this device
 
-	modules: [/*
+	modules: [
 		{
 			module: "alert",
 		},
@@ -46,52 +46,8 @@ let config = {
 			position: "top_bar"
 		},
 		{
-			module: "clock",
-			position: "top_left"
-		},
-		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"
-					}
-				]
-			}
-		},
-		{
-			module: "compliments",
-			position: "bottom_bar"
-		},
-		{
-			module: "weather",
-			position: "top_right",
-			config: {
-				weatherProvider: "openweathermap",
-				type: "current",
-				location: "South Hadley",
-				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				apiKey: "9aca5ffce31dc14a13569843886d5c97"
-			}
-		},
-		{
-			module: "weather",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				weatherProvider: "openweathermap",
-				type: "forecast",
-				location: "South Hadley",
-				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				apiKey: "9aca5ffce31dc14a13569843886d5c97"
-			}
-		},
-		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			position: "top_left",
 			config: {
 				feeds: [
 					{
@@ -104,26 +60,62 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
-		}, */
+		},
+		{
+			module: "clock",
+			position: "top_left"
+		},/*
+		{
+			module: "calendar",
+			header: "US Holidays",
+			position: "top_left",
+			config: {
+				calendars: [
+					{
+						symbol: "calendar-check",
+						url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"
+					}
+				]
+			}
+		},*/
+		{
+			module: "compliments",
+			position: "bottom_bar"
+		},
+		{
+			module: "weather",
+			position: "bottom_left",
+			config: {
+				weatherProvider: "openweathermap",
+				type: "current",
+				location: "South Hadley",
+				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+				apiKey: "9aca5ffce31dc14a13569843886d5c97"
+			}
+		},
+		{
+			module: "weather",
+			position: "bottom_left",
+			header: "Weather Forecast",
+			config: {
+				weatherProvider: "openweathermap",
+				type: "forecast",
+				location: "South Hadley",
+				locationID: "4951397", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+				apiKey: "9aca5ffce31dc14a13569843886d5c97"
+			}
+		},
+		 
 		{
 			module: "MMM-ASL",
-			position: "middle_center",
+			position: "top_right",
 			config: {
+				type: "mini", // mini, default: "mididle_center"
 				maxWidth: "20%",
 				//style: "1",
 				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
 			}
 		}, /*
-				{
-			module: "MMM-ASLLearn",
-			position: "middle_center",
-			config: {
-				maxWidth: "40%",
-				
-				//style: "1",
-				//ownImagePath: 'modules/MMM-EyeCandy/pix/mar.JPG',
-			}
-		}, 
 
 		{
 			module: "googlemap",
@@ -133,8 +125,7 @@ let config = {
 				origin: 'Mount Holyoke College',
 				destination: 'UMass',
 			}
-			
-		},
+		},*/
 		{
 			module: 'MMM-GoogleTasks',
 			header: "Google Tasks",
@@ -143,7 +134,7 @@ let config = {
 				listID: "MDk0NjQ2MDQyNjc1OTA5NDUzOTY6MDow",
 			}
 			
-		},*/
+		},
 	]
 };
 

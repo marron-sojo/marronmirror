@@ -9,6 +9,7 @@
 Module.register("MMM-ASL", {
     // Default module config.
     defaults: {
+        type: "default",
         maxWidth: "100%", // Adjusts size of images. Retains aspect ratio.
     },
 
@@ -117,44 +118,70 @@ Module.register("MMM-ASL", {
 	getStyles: function () {
 		return ["MMM-ASL.css"];
 	},
+    
+    getHeader: function () {
+		return (this.config.type === "mini")?"ASL Learning": "";
+	},
 
     getDom: function() {
         
-        var container = document.createElement("div");
-        container.classList.add("out");
         
-        var logoWrapper = document.createElement("div");
-        logoWrapper.classList.add("logo");
-        var intro = document.createElement("intro");
-        intro.innerHTML = "<p>Let's learn ASL</p><hr/>";
-        logoWrapper.appendChild(intro);
         
-        var wrapper = document.createElement("div");
-        wrapper.classList.add("main");
-        
-        var text = document.createElement("text");
-        text.innerHTML = this.word;
-        text.classList.add("word");
-        wrapper.appendChild(text);
-        
-        var image = document.createElement("img");
-        image.classList.add("photo");
-        image.src = this.url;
-        image.style.maxWidth = this.config.maxWidth;
-        wrapper.appendChild(image);
-        
-        var footerWrapper = document.createElement("div");
-        footerWrapper.classList.add("footer");
-        var foot = document.createElement("foot");
-        foot.innerHTML = "Marron Mirror @ Joni & Sohee";
-        footerWrapper.appendChild(foot);
-        
-        container.appendChild(logoWrapper);
-        container.appendChild(wrapper);
-        container.appendChild(footerWrapper);
+        if (this.config.type === "mini") {
+            var container = document.createElement("div");
+            container.classList.add("mini-out");
+            
+            var image = document.createElement("img");
+            image.classList.add("mini-photo");
+            image.src = this.url;
+            //image.style.maxWidth = this.config.maxWidth;
+            container.appendChild(image);
+            
+            var text = document.createElement("text");
+            text.innerHTML = this.word;
+            text.classList.add("mini-word");
+            container.appendChild(text);
 
+            return container;
+        
+        } else {
+            var container = document.createElement("div");
+            container.classList.add("out");
+            
+            var logoWrapper = document.createElement("div");
+            logoWrapper.classList.add("logo");
+            var intro = document.createElement("intro");
+            intro.innerHTML = "<p>Let's learn ASL</p><hr/>";
+            logoWrapper.appendChild(intro);
+            
+            var wrapper = document.createElement("div");
+            wrapper.classList.add("main");
+            
+            var text = document.createElement("text");
+            text.innerHTML = this.word;
+            text.classList.add("word");
+            wrapper.appendChild(text);
+            
+            var image = document.createElement("img");
+            image.classList.add("photo");
+            image.src = this.url;
+            image.style.maxWidth = this.config.maxWidth;
+            wrapper.appendChild(image);
+            
+            var footerWrapper = document.createElement("div");
+            footerWrapper.classList.add("footer");
+            var foot = document.createElement("foot");
+            foot.innerHTML = "Marron Mirror @ Joni & Sohee";
+            footerWrapper.appendChild(foot);
+            
+            container.appendChild(logoWrapper);
+            container.appendChild(wrapper);
+            container.appendChild(footerWrapper);
+            
+            return container;
+        }
 
-        return container;
+        
     },
 
     // /////  Add this function to the modules you want to control with voice //////

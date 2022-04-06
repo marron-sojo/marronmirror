@@ -3,7 +3,7 @@ Module.register("MMM-GoogleTasks",{
 	defaults: {
 
 		listID: "", // List ID (see authenticate.js)
-		maxResults: 10,		
+		maxResults: 5,		
 		showCompleted: false, //set showCompleted and showHidden true
 		ordering: "myorder", // Order by due date or by 'my order' NOT IMPLEMENTED
 		dateFormat: "MMM Do", // Format to display dates (moment.js formats)

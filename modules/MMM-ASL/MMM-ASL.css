@@ -40,6 +40,26 @@
     align-items: center;
 }
 
-.footer {
+
+/* mini */
+
+.mini-out {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
+}
+
+.mini-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 60px;
+}
+
+.mini-word {
+    color: white;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

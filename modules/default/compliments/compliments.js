@@ -117,7 +117,7 @@ Module.register("compliments", {
 		
 		return compliments*/
 
-		return ["Heythere,joni&sohee!", "Hello,Barbara:)"];
+		return ["Hi CSSociety!"];
 	},
 
 	/**
